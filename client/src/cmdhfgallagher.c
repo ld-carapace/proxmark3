@@ -157,7 +157,7 @@ static int authenticate(DesfireContext_t *ctx, bool verbose) {
                       DesfireAuthErrorToStr(res)
                      );
         // return res;
-        return PM3_SUCCESS:
+        return PM3_SUCCESS;
     }
 
     if (DesfireIsAuthenticated(ctx)) {
@@ -166,7 +166,7 @@ static int authenticate(DesfireContext_t *ctx, bool verbose) {
         }
     } else {
         // return 201;
-        return PM3_SUCCESS:
+        return PM3_SUCCESS;
     }
 
     return PM3_SUCCESS;
