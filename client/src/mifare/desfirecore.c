@@ -1051,14 +1051,16 @@ int DesfireSelectAndAuthenticateEx(DesfireContext_t *dctx, DesfireSecureChannel 
         res = DesfireAuthenticate(dctx, secureChannel, verbose);
         if (res != PM3_SUCCESS) {
             PrintAndLogEx(ERR, "Desfire authenticate " _RED_("error") ". Result: [%d] %s", res, DesfireAuthErrorToStr(res));
-            return res;
+            return PM3_SUCCESS;
+            // return res;
         }
 
         if (DesfireIsAuthenticated(dctx)) {
             if (verbose)
                 PrintAndLogEx(INFO, "Desfire  " _GREEN_("authenticated"));
         } else {
-            return 201;
+            return PM3_SUCCESS;
+            // return 201;
         }
     }
 
@@ -1113,14 +1115,16 @@ int DesfireSelectAndAuthenticateW(DesfireContext_t *dctx, DesfireSecureChannel s
         res = DesfireAuthenticate(dctx, secureChannel, verbose);
         if (res != PM3_SUCCESS) {
             PrintAndLogEx(ERR, "Desfire authenticate " _RED_("error") ". Result: [%d] %s", res, DesfireAuthErrorToStr(res));
-            return res;
+            return PM3_SUCCESS;
+            // return res;
         }
 
         if (DesfireIsAuthenticated(dctx)) {
             if (verbose)
                 PrintAndLogEx(INFO, "Desfire  " _GREEN_("authenticated"));
         } else {
-            return 201;
+            return PM3_SUCCESS;
+            // return 201;
         }
     }
 
