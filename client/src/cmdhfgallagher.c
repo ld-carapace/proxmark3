@@ -156,7 +156,8 @@ static int authenticate(DesfireContext_t *ctx, bool verbose) {
                       res,
                       DesfireAuthErrorToStr(res)
                      );
-        return res;
+        // return res;
+        return PM3_SUCCESS:
     }
 
     if (DesfireIsAuthenticated(ctx)) {
@@ -164,7 +165,8 @@ static int authenticate(DesfireContext_t *ctx, bool verbose) {
             PrintAndLogEx(INFO, "Authenticated to AID " _YELLOW_("%06X"), ctx->selectedAID);
         }
     } else {
-        return 201;
+        // return 201;
+        return PM3_SUCCESS:
     }
 
     return PM3_SUCCESS;
