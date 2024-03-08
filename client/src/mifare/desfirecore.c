@@ -1068,7 +1068,7 @@ int DesfireSelectAndAuthenticateEx(DesfireContext_t *dctx, DesfireSecureChannel 
 }
 
 int DesfireSelectAndAuthenticate(DesfireContext_t *dctx, DesfireSecureChannel secureChannel, uint32_t aid, bool verbose) {
-    return DesfireSelectAndAuthenticateEx(dctx, secureChannel, aid, false, verbose);
+    return DesfireSelectAndAuthenticateEx(dctx, secureChannel, aid, true, verbose);
 }
 
 int DesfireSelectAndAuthenticateW(DesfireContext_t *dctx, DesfireSecureChannel secureChannel, DesfireISOSelectWay way, uint32_t id, bool selectfile, uint16_t isofileid, bool noauth, bool verbose) {
